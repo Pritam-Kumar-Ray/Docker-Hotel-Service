@@ -1,0 +1,20 @@
+
+server:
+  port: ${SERVER_PORT:6062}
+  servlet:
+    context-path: /hotel-service
+
+spring:
+  application:
+    name: HOTEL-SERVICE
+  datasource:
+#    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=hm-hotel-service
+#    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:postgres}?currentSchema=${DB_SCHEMA_NAME:hm-hotel-service}
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:postgres}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:root}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
