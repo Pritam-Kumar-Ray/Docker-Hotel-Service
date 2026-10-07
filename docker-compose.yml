@@ -15,7 +15,7 @@ services:
 
   hotel-service:
     build: .
-    image: docker-hotel-service:3.0
+    image: docker-hotel-service:4.0
     ports:
       - "6063:6062"
     environment:
